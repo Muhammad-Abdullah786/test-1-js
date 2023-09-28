@@ -18,3 +18,7 @@ function randomPassword(length) {
 
 var passwordLength = prompt("Enter the password length:");
 console.log(randomPassword(passwordLength));
+
+// another way to generate random password
+
+

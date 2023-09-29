@@ -41,4 +41,34 @@ function generatePassword() {
     return password;
 }
 
-document.write("the random password is <br> " + generatePassword());
+// document.write("the random password is <br> " + generatePassword());
+
+// easiest way to generate a random password
+//////////////////////////////////////////////////////
+
+
+function generateRandomPassword(length) {
+    const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=";
+    let password = "";
+
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * charset.length);
+        password += charset.substring(randomIndex, randomIndex + 1);
+    }
+
+    return password;
+}
+
+
+function generatePassword(len) {
+    // var passwordLength = 12;
+    var charSet = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-_+=';// make sure it is string because array won;t work properly on substring
+    var password = "";
+    for (var i = 0; i < len; i++) {
+        const ranIndex = Math.floor(Math.random() * charSet.length);
+        password += charSet.substring(ranIndex , ranIndex + 1);
+    }
+    return password;
+}
+
+console.log(generatePassword(12));

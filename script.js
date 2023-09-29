@@ -46,20 +46,6 @@ function generatePassword() {
 // easiest way to generate a random password
 //////////////////////////////////////////////////////
 
-
-function generateRandomPassword(length) {
-    const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_+=";
-    let password = "";
-
-    for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * charset.length);
-        password += charset.substring(randomIndex, randomIndex + 1);
-    }
-
-    return password;
-}
-
-
 function generatePassword(len) {
     // var passwordLength = 12;
     var charSet = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()-_+=';// make sure it is string because array won;t work properly on substring
